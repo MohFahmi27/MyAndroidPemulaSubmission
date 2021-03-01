@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">MyAndroidPemulaSubmission</string>
+    <string name="app_name">My App</string>
+    <string name="welcome_my_friend">Welcome My Friend</string>
+    <string name="lokasi_horror_indonesia">The Most Scariest Place in Indonesia</string>
+    <string name="don_t_be_scared">DON\'T BE SCARED</string>
 </resources>
