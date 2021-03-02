@@ -1,10 +1,14 @@
 package com.mfahmi.myandroidpemulasubmission
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.mfahmi.myandroidpemulasubmission.LokasiHorror.LokasiHorrorAdapter
+import com.mfahmi.myandroidpemulasubmission.LokasiHorror.LokasiHorrorData
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         recyclerView = findViewById(R.id.rv_main)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        val lokasiHorrorData = LokasiHorrorData()
+        recyclerView.adapter = LokasiHorrorAdapter(lokasiHorrorData.lokasiBerhantu)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -24,6 +31,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.about_me -> {
+                val intent = Intent(this, AboutActivity::class.java)
+                startActivity(intent)
+            }
+        }
         return super.onOptionsItemSelected(item)
     }
 

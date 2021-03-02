@@ -21,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/img_lokasi"
             android:layout_width="100dp"
             android:layout_height="150dp"
             android:scaleType="centerCrop"
@@ -39,10 +40,12 @@
         android:id="@+id/tv_nama"
         style="@style/TextViewDefault"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:textSize="20sp"
-        android:letterSpacing="0.158"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="@+id/cardView"
         app:layout_constraintVertical_bias="0.07999998"
@@ -76,7 +79,7 @@
         android:id="@+id/tv_lokasi"
         style="@style/TextViewDefault"
         android:layout_marginStart="4dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:textColor="@android:color/darker_gray"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
@@ -84,30 +87,21 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        tools:text="Jl. Pemuda, Semarang, Jawa Tengah"
-        tools:ignore="SmallSp" />
+        tools:ignore="SmallSp"
+        tools:text="Jl. Pemuda, Semarang, Jawa Tengah" />
 
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="0dp"
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/primaryColor"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_detail"
-        app:layout_constraintTop_toTopOf="@+id/cardView">
-
-        <ImageButton
-            android:id="@+id/btn_share"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@color/secondaryColor"
-            android:src="@drawable/ic_baseline_share_24"
-            tools:ignore="ContentDescription" />
-
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
