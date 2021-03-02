@@ -1,6 +1,7 @@
 package com.mfahmi.myandroidpemulasubmission.LokasiHorror
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.mfahmi.myandroidpemulasubmission.DetailActivity
 import com.mfahmi.myandroidpemulasubmission.R
 
 class LokasiHorrorAdapter(private val listLokasiHorror: ArrayList<LokasiHorror>):
@@ -27,6 +29,14 @@ class LokasiHorrorAdapter(private val listLokasiHorror: ArrayList<LokasiHorror>)
         Glide.with(holder.itemView.context)
                 .load(listLokasiHorror[position].img)
                 .into(holder.imgLokasi)
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_NAME, listLokasiHorror[position].name)
+            intent.putExtra(DetailActivity.EXTRA_LOKASI, listLokasiHorror[position].lokasi)
+            intent.putExtra(DetailActivity.EXTRA_DETAIL, listLokasiHorror[position].detail)
+            intent.putExtra(DetailActivity.EXTRA_IMG, listLokasiHorror[position].img)
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = listLokasiHorror.size

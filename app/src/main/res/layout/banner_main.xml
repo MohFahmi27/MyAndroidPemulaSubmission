@@ -7,57 +7,60 @@
     android:layout_margin="@dimen/dimen_default">
 
     <TextView
-        android:id="@+id/textView"
-        style="@style/TextViewDefault"
+        android:id="@+id/tv_detail_name"
+        style="@style/DefaultTextView"
+        android:layout_marginTop="16dp"
+        android:text="@string/welcome_my_friend"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:layout_marginTop="4dp"
-        android:text="@string/welcome_my_friend"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView2"
-        style="@style/TextViewDefault"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        style="@style/DefaultTextView"
+        app:layout_constraintEnd_toEndOf="@+id/tv_detail_name"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/tv_detail_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_name"
         android:layout_marginTop="8dp"
         android:text="@string/lokasi_horror_indonesia"
         android:textSize="14sp"
         android:textStyle="bold" />
 
     <TextView
-        style="@style/TextViewDefault"
+        android:id="@+id/tv_detail_lokasi"
+        style="@style/DefaultTextView"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/don_t_be_scared"
+        android:textColor="@color/secondaryColor"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.35000002"
-        android:text="@string/don_t_be_scared"
-        android:textColor="@color/secondaryColor"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        app:layout_constraintVertical_bias="0.35000002" />
 
     <ImageView
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44"
-        android:layout_width="98dp"
-        android:layout_height="95dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/don_t_be_scared"
-        android:src="@drawable/ic_ghost" />
+        android:src="@drawable/ic_ghost"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

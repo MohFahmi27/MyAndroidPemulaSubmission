@@ -96,6 +96,18 @@ class LokasiHorrorData {
             "Spot angker lain di Gunung Merapi adalah sebuah bunker di mana dua orang " +
                     "penjaganya tewas terpanggang lahar panas saat gunung ini meletus.",
             "Selo, Boyolali"
+        ),
+        LokasiHorror(
+                "Tana Toraja",
+                R.drawable.tana_toraja_img,
+                "Sebagai salah satu budaya dengan ritual pemakaman tertua di dunia, " +
+                        "bagi masyarakat Toraja kematian bukanlah sesuatu yang menakutkan. Malahan " +
+                        "mereka merayakannya dengan mengadakan prosesi pemakaman secara megah " +
+                        "dan besar-besaran. Tak jarang mereka rela menabung hingga bertahun-tahun " +
+                        "agar bisa “merayakan” kematian kerabat mereka. Dan selama bertahun-tahun " +
+                        "itu pula, jenazah kerabat yang meninggal disimpan di dalam rumah " +
+                        "dan diperlakukan layaknya masih hidup – diberi makan, dimandikan, bahkan kadang dibawa ke luar.",
+                "Tana Toraja, Sulawesi Selatan"
         )
     )
 }
